@@ -1,0 +1,275 @@
+<!DOCTYPE html!>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;l̥ō
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #e0e0e0;
+        }
+
+        section {
+            padding: 4em 2em;
+            margin: 0 auto;
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section:nth-of-type(even) {
+            background-color: #f4f4f9;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #4CAF50;
+        }
+
+        .about-me {
+            text-align: center;
+        }
+
+        .about-me img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1em;
+        }
+
+        .skills ul, .projects ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .skills ul li, .projects ul li {
+            margin: 0.5em 0;
+        }
+
+        .projects ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .projects ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .projects ul li a:hover {
+            color: #3d8b3d;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact form input, .contact form textarea {
+            padding: 0.5em;
+            margin: 0.5em 0;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .contact form input:focus, .contact form textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .contact form button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .contact form button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5em;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #cccccc;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+  
+    <section id="about" class="about-me">
+        <h2><u><b>About Me</b></u></h2>
+        <img src="https://www.shutterstock.com/image-vector/male-avatar-icon-portrait-handsome-260nw-604570796.jpg"
+         width="150px"height=100px" alt="Your Photo">
+        <p<marquee>Hello, Iam, <i>Satish kagitha</i>, a passionate web developer with experienc
+            e in creating dynamic
+             and responsive web applications. Dedicated to the art<br> of web development, I am a digital craftsman
+              passionate about crafting engaging online experiences. With a blend of creativity and technical expertise
+              , I transform ideas into visually captivating websites. Let's collaborate and bring your digital dreams to reality
+              Your online presence matters, and I'm here to make it shine. Reach out, and let's build something extraordinary together!ls.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2><u><B>Skills</B></u></h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript & React</li>
+            <li>Node.js & Express</li>
+            <li>Python & Django</li>
+            <li>SQL & NoSQL Databases</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2><u><B>Projects</B></u></h2>
+        <ul>
+            <li>
+                <span>Project 1: Portfolio Website</span>
+                <a href="link-to-your-project1" target="_blank">View Project</a>
+            </li>
+            <li>
+                <span>Project 2: E-commerce Platform</span>
+                <a href="link-to-your-project2" target="_blank">View Project</a>
+            </li>
+            <li>
+                <span>Project 3: Blogging Application</span>
+                <a href="link-to-your-project3" target="_blank">View Project</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2><u><b>Contact</b></u></h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p><marquee>2024 <i><u>SATISH KAGITHA</u></i> All rights reserved.</p>
+        <p><u><i><b>Follow me on:</b></i></u>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> !
+            <a href="https://github.com/yourprofile" target="_blank">GitHub</a> !
+           <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> !
+           <a href="https://instagram.com/yourprofile" target="_blank">instagram</a> !
+        </p>
+    </footer>
+
+    <script>
+        // Intersection Observer for section animations
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.25
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert(`Thank you, ${name}! Your message has been sent.`);
+                // Clear the form
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+,
